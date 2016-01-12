@@ -1,7 +1,7 @@
 #!/bin/bash
 #pete@jalajas.com
 #2016-01-11
-#GPL 3.0
+#GPL 3.0 or any later version
 
 #Selects PowerBall numbers from /dev/urandom, not /dev/random
 #http://www.powerball.com/powerball/pb_prizes.asp
