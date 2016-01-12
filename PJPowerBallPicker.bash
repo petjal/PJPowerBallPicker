@@ -6,6 +6,8 @@
 #Selects PowerBall numbers from /dev/urandom, not /dev/random
 #http://www.powerball.com/powerball/pb_prizes.asp
 
+#WARNING:  Suggestions welcome.   Use at your own risk. 
+
 #USAGE: for mtix in {001..100} true ; do ./PJPowerBallPicker.bash ; done
 
 #CREDITS:  
