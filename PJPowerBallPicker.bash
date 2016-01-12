@@ -8,7 +8,7 @@
 
 #WARNING:  Suggestions welcome.   Use at your own risk. 
 
-#USAGE: for mtix in {001..100} true ; do ./PJPowerBallPicker.bash ; done
+#USAGE example: for mtix in {001..100} true ; do ./PJPowerBallPicker.bash ; done
 
 #OUTPUT: like:
 #2 14 20 39 67 / 18
@@ -38,7 +38,7 @@ mticket=''  # will be like "09 12 27 35 58 / 22"
 #Select the white balls
 while true
 do
-    #Gather random bis from urandam and convert to digits
+    #Gather a byte of random bits from urandom in form of decimal digits (0-256?).
     mball=" "$(od -A n -t d -N 1 /dev/urandom)" "
     #Test if in range, and if not already selected.  BUG in there somewhere.
     if [ "$mball" -ge "$mAmin" ] && \
