@@ -40,21 +40,20 @@ while true
 do
     #Gather a byte of random bits from urandom in form of decimal digits (0-256?).
     mball=" "$(od -A n -t d -N 1 /dev/urandom)" "
-    #Test if in range, and if not already selected.  BUG in there somewhere.
+    #Test if in range
     if [ "$mball" -ge "$mAmin" ] && \
-       [ "$mball" -le "$mAmax" ] && \
-       [[ $mticket != .*\s${mball}\ .* ]] ; then
-       #New number, so append to itcket
+       [ "$mball" -le "$mAmax" ] ; then
+       #Append to ticket
        mticket=" $mticket $mball "
-       #Sort the ticket numbers and remove any accidental duplicates
+       #Sort the ticket numbers and remove any duplicates
        mticket=$(echo $mticket | tr " " "\n" | sort -nu | tr "\n" " " )
        #echo $mticket
     fi
 
-    #Count how many unique numbers we have
+    #Count how many unique numbers we have so far...
     mpicks=$(echo $mticket | wc -w)
 
-    #If we have enough numbers for a ticket break out of the loop
+    #If we have enough numbers for a ticket, then break out of the loop
     if [ "$mpicks" == "$mAnum" ] ; then
         break
     fi
@@ -79,3 +78,4 @@ mticket=$(echo $mticket "/" $mpowerball )
 #Print out the ticket
 echo $mticket
 
+ 
