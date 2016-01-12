@@ -14,6 +14,7 @@
 #Inspired by: https://www.random.org/quick-pick/?tickets=100&lottery=5x69.1x26
 #Stolen from web:  od /dev/urandom , tr|sort, echo | wc 
 
+#CONFIG
 mAmin=1
 mAmax=69  # white balls
 mAnum=5   # number of white balls
@@ -22,6 +23,7 @@ mPmax=26  # powerballs
 mpicks=0
 mticket=''  # will be like "09 12 27 35 58 / 22"
 
+#MAIN
 while true
 do
     mball=" "$(od -A n -t d -N 1 /dev/urandom)" "
