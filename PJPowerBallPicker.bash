@@ -1,5 +1,5 @@
 #!/bin/bash
-#pete@jalajas.com
+#https://github.com/petjal/PJPowerBallPicker
 #2016-01-11
 #GPL 3.0 or any later version
 
